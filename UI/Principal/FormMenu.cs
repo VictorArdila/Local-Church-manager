@@ -15,6 +15,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices;
 using System.Threading;
 using Cloud;
+using Ldb;
 
 namespace UI
 {
@@ -34,7 +35,7 @@ namespace UI
         private readonly object sender;
         public FormMenu()
         {
-            empleadoService = new UsuarioService(ConfigConnection.ConnectionString);
+            empleadoService = new UsuarioService(DbConfig.ConnectionString);
             InitializeComponent();
             ValidarUsuario();
             //ValidarDisponibilidadNube();

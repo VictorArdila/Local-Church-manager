@@ -18,6 +18,7 @@ using Microsoft.Win32;
 using System.Globalization;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using DocumentFormat.OpenXml.Spreadsheet;
+using Ldb;
 
 namespace UI
 {
@@ -55,9 +56,9 @@ namespace UI
         string generoDelTipo="";
         public FormMiembros()
         {
-            simpatizanteService = new SimpatizanteService(ConfigConnection.ConnectionString);
-            contactoService = new ContactoService(ConfigConnection.ConnectionString);
-            miembroService = new MiembroService(ConfigConnection.ConnectionString);
+            simpatizanteService = new SimpatizanteService(DbConfig.ConnectionString);
+            contactoService = new ContactoService(DbConfig.ConnectionString);
+            miembroService = new MiembroService(DbConfig.ConnectionString);
             contactMaps = new ContactMaps();
             memberMaps = new MemberMaps();
             reporte = new Reporte();

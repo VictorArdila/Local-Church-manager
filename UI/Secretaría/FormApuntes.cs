@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Entity;
 using FirebaseAdmin.Messaging;
 using Cloud;
+using Ldb;
 
 namespace UI
 {
@@ -25,7 +26,7 @@ namespace UI
         bool encontrado = false;
         public FormApuntes()
         {
-            apunteService = new ApunteService(ConfigConnection.ConnectionString);
+            apunteService = new ApunteService(DbConfig.ConnectionString);
             InitializeComponent();
             Inicializar();
         }

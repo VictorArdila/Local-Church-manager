@@ -4,18 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 //se importa la libreria para arrastrar formulario
 using System.Runtime.InteropServices;
 using BLL;
 using Entity;
-using Microsoft.Win32;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using System.Windows.Documents;
-using Google.Cloud.Firestore;
-using Cloud;
+using Ldb;
 
 namespace UI
 {
@@ -31,7 +25,7 @@ namespace UI
         bool programadorExistenteValido;
         public FormRegistrarUsuario()
         {
-            usuarioService = new UsuarioService(ConfigConnection.ConnectionString);
+            usuarioService = new UsuarioService(DbConfig.ConnectionString);
             userMaps = new UserMaps();
             InitializeComponent();
         }

@@ -14,6 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ldb;
 
 namespace UI
 {
@@ -30,7 +31,7 @@ namespace UI
         int sumLiquidaciones = 0;
         public FormLiquidacion()
         {
-            liquidacionService = new LiquidacionService(ConfigConnection.ConnectionString);
+            liquidacionService = new LiquidacionService(DbConfig.ConnectionString);
             settlementMaps = new SettlementMaps();
             InitializeComponent();
             ConsultarLiquidaciones();

@@ -9,7 +9,7 @@ namespace DAL
 {
     public class ConnectionManager
     {
-        internal SqlConnection _conexion;
+        public SqlConnection _conexion;
         public ConnectionManager(string connectionstring)
         {
             _conexion = new SqlConnection(connectionstring);

@@ -60,7 +60,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>logo.ico</ApplicationIcon>
@@ -208,7 +208,6 @@
     <Compile Include="Firebase\BudgetLocalMaps.cs" />
     <Compile Include="Firebase\ChurchMaps.cs" />
     <Compile Include="Firebase\BudgetMaps.cs" />
-    <Compile Include="ConfigConection.cs" />
     <Compile Include="Ajustes\FormAjustarServidor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -474,7 +473,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="UI_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -500,6 +498,10 @@
     <ProjectReference Include="..\Entity\Entity.csproj">
       <Project>{8694a930-3e61-465d-ac74-10e7ba27ed83}</Project>
       <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ldb\Ldb.csproj">
+      <Project>{5430163a-1e44-4e56-a878-a68feadc63a7}</Project>
+      <Name>Ldb</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -566,13 +568,7 @@
     <None Include="Resources\WhatsApp.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\miembros11.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\User.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\miembros1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\membresia.png" />

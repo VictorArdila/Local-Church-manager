@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Configuration;
 using System.Windows.Forms;
 using BLL;
 using Entity;
 using System.Xml;
+using Ldb;
 
 namespace UI
 {
@@ -43,7 +38,7 @@ namespace UI
         string RutaMiembros;
         public FormAjustes()
         {
-            iglesiaService = new IglesiaService(ConfigConnection.ConnectionString);
+            iglesiaService = new IglesiaService(DbConfig.ConnectionString);
             InitializeComponent();
             BuscarPorId();
             EncontrarCadenaDeConexion();

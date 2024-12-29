@@ -18,6 +18,7 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System.IO;
 using DocumentFormat.OpenXml.Office2013.WebExtension;
+using Ldb;
 
 namespace UI
 {
@@ -44,7 +45,7 @@ namespace UI
         string filtro = "";
         public FormIngresos()
         {
-            ingresoService = new IngresoService(ConfigConnection.ConnectionString);
+            ingresoService = new IngresoService(DbConfig.ConnectionString);
             ingressMaps = new IngressMaps();
             InitializeComponent();
             ConsultarIngresos();

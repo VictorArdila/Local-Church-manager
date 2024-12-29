@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ldb;
 
 namespace UI
 {
@@ -26,7 +27,7 @@ namespace UI
         string reunionId = "";
         public FormReuniones()
         {
-            reunionService = new ReunionService(ConfigConnection.ConnectionString);
+            reunionService = new ReunionService(DbConfig.ConnectionString);
             InitializeComponent();
             Inicializar();
         }

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using BLL;
 using Entity;
+using Ldb;
 
 namespace UI
 {
@@ -38,7 +39,7 @@ namespace UI
         bool identificacionValida;
         public FormRestaurarContraseña()
         {
-            usuarioService = new UsuarioService(ConfigConnection.ConnectionString);
+            usuarioService = new UsuarioService(DbConfig.ConnectionString);
             userMaps = new UserMaps();
             InitializeComponent();
         }

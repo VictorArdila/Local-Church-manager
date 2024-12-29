@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ldb;
 
 namespace UI
 {
@@ -27,7 +28,7 @@ namespace UI
         bool encontrado = false;
         public FormDirectivas()
         {
-            directivaService = new DirectivaService(ConfigConnection.ConnectionString);
+            directivaService = new DirectivaService(DbConfig.ConnectionString);
             InitializeComponent();
             Inicializar();
         }

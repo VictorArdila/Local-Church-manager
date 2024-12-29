@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using Ldb;
 
 namespace UI
 {
@@ -30,7 +31,7 @@ namespace UI
         bool detallo = false;
         public FormEnviables()
         {
-            enviableService = new EnviableService(ConfigConnection.ConnectionString);
+            enviableService = new EnviableService(DbConfig.ConnectionString);
             shippableMaps = new ShippableMaps();
             InitializeComponent();
             ConsultarEnvios();

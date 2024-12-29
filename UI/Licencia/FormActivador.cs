@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using Entity;
+using Ldb;
 
 namespace UI
 {
@@ -30,8 +24,8 @@ namespace UI
         public string ModoDeEntrada;
         public FormActivador()
         {
-            softwareService = new SoftwareService(ConfigConnection.ConnectionString);
-            licenciaService = new LicenciaService(ConfigConnection.ConnectionString);
+            softwareService = new SoftwareService(DbConfig.ConnectionString);
+            licenciaService = new LicenciaService(DbConfig.ConnectionString);
             InitializeComponent();
             Inicializar();
             ConsultarEstado();

@@ -19,6 +19,7 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using Ldb;
 
 namespace UI
 {
@@ -57,7 +58,7 @@ namespace UI
         public FormPresupuesto()
         {
             validaciones = new Validaciones();
-            presupuestoService = new PresupuestoService(ConfigConnection.ConnectionString);
+            presupuestoService = new PresupuestoService(DbConfig.ConnectionString);
             budgetMaps = new BudgetMaps();
             budgetLocalMaps = new BudgetLocalMaps();
             InitializeComponent();

@@ -1,25 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using BLL;
 using Entity;
 //se importa la libreria para arrastrar formulario
 using System.Runtime.InteropServices;
-using System.Threading;
 using Cloud;
-using FirebaseAdmin.Messaging;
-using Google.Cloud.Firestore;
-using DocumentFormat.OpenXml.Office2010.Excel;
 using Color = System.Drawing.Color;
-using static Google.Cloud.Firestore.V1.StructuredAggregationQuery.Types.Aggregation.Types;
-using System.Drawing.Drawing2D;
+using Ldb;
 
 namespace UI
 {
@@ -43,8 +34,8 @@ namespace UI
 
         public FormInicioSesion()
         {
-            softwareService = new SoftwareService(ConfigConnection.ConnectionString);
-            usuarioService = new UsuarioService(ConfigConnection.ConnectionString);
+            softwareService = new SoftwareService(DbConfig.ConnectionString);
+            usuarioService = new UsuarioService(DbConfig.ConnectionString);
             InitializeComponent();
             UbicacionesPorDefault();
 

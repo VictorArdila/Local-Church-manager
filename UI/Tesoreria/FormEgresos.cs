@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using Ldb;
 
 namespace UI
 {
@@ -38,7 +39,7 @@ namespace UI
         string filtro = "";
         public FormEgresos()
         {
-            egresoService = new EgresoService(ConfigConnection.ConnectionString);
+            egresoService = new EgresoService(DbConfig.ConnectionString);
             egressMaps = new EgressMaps();
             InitializeComponent();
             ConsultarEgresos();

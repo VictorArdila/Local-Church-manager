@@ -19,6 +19,7 @@ using System.Net.Http.Headers;
 using System.Net.Http;
 using Cloud;
 using Application = System.Windows.Forms.Application;
+using Ldb;
 
 namespace UI
 {
@@ -33,7 +34,7 @@ namespace UI
         bool encontrado = false;
         public FormDirectorio()
         {
-            contactoService = new ContactoService(ConfigConnection.ConnectionString);
+            contactoService = new ContactoService(DbConfig.ConnectionString);
             InitializeComponent();
             Inicializar();
         }

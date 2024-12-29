@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using BLL;
 using Entity;
 using System.Xml;
+using Ldb;
 
 namespace UI
 {
@@ -95,6 +96,8 @@ namespace UI
                 ModificarCadenaConexion();
                 ConsultarCadena();
             }
+            var initializer = new InitDb();
+            initializer.InitializeDatabase();
         }
 
         private void textCadenaConexion_TextChanged(object sender, EventArgs e)

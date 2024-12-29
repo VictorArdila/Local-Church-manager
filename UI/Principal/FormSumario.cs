@@ -15,6 +15,7 @@ using Cloud;
 using DocumentFormat.OpenXml.Office2013.WebExtension;
 using Entity;
 using Google.Cloud.Firestore;
+using Ldb;
 
 namespace UI
 {
@@ -37,11 +38,11 @@ namespace UI
         Apunte apunte;
         public InicioResumen()
         {
-            contactoService = new ContactoService(ConfigConnection.ConnectionString);
-            miembroService = new MiembroService(ConfigConnection.ConnectionString);
-            directivaService = new DirectivaService(ConfigConnection.ConnectionString);
-            reunionService = new ReunionService(ConfigConnection.ConnectionString);
-            apunteService = new ApunteService(ConfigConnection.ConnectionString);
+            contactoService = new ContactoService(DbConfig.ConnectionString);
+            miembroService = new MiembroService(DbConfig.ConnectionString);
+            directivaService = new DirectivaService(DbConfig.ConnectionString);
+            reunionService = new ReunionService(DbConfig.ConnectionString);
+            apunteService = new ApunteService(DbConfig.ConnectionString);
             InitializeComponent();
             Inicializar();
         }
